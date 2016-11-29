@@ -1,0 +1,39 @@
+#include <iostream>
+#include <cmath>
+#include "punto.h"
+
+using namespace std;
+
+// Implementación de las funciones
+void EscribirPunto(const Punto &p)
+{
+	cout << "(" << p.x << "," << p.y << ")" << endl;
+}
+
+Punto LeerPunto()
+{
+	Punto p;
+	
+	cout << "Introduce el valor de x para el punto: ";
+	cin >> p.x;
+
+	cout << "Introduce el valor de y para el punto: ";
+	cin >> p.y;
+	
+	return p;
+}
+
+double DistanciaPuntos(const Punto &p1, const Punto &p2)
+{
+	return sqrt(pow(p2.x-p1.x,2)+pow(p2.y-p1.y,2));
+}
+
+Punto PuntoMedio(const Punto &p1, const Punto &p2)
+{
+	Punto pm;
+	
+	pm.x=(p1.x+p2.x)/2;
+	pm.y=(p1.y+p2.y)/2;
+
+	return pm;
+}
